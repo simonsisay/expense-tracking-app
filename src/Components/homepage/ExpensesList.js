@@ -12,7 +12,7 @@ class ExpensesList extends Component {
 	render(){
 		return(
 			<div className="expenses-list">
-				<div className="sort-and-title">
+				<div className="sticky-top sort-and-title">
 					<h3>Expenses</h3>
 					<FormGroup className="select-sort">
 			          <Label for="exampleSelect" className="label">Sort by</Label>
@@ -24,6 +24,34 @@ class ExpensesList extends Component {
 				</div>
 
 				<div className="expense">
+					<Expense 
+						amount={'500'}
+						description={'Rent'}
+						date={'12/06/2018'}
+						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
+						toggleModal={this.props.toggleModal}
+					/>
+					<Expense 
+						amount={'500'}
+						description={'Rent'}
+						date={'12/06/2018'}
+						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
+						toggleModal={this.props.toggleModal}
+					/>
+					<Expense 
+						amount={'500'}
+						description={'Rent'}
+						date={'12/06/2018'}
+						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
+						toggleModal={this.props.toggleModal}
+					/>
+					<Expense 
+						amount={'500'}
+						description={'Rent'}
+						date={'12/06/2018'}
+						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
+						toggleModal={this.props.toggleModal}
+					/>
 					<Expense 
 						amount={'500'}
 						description={'Rent'}

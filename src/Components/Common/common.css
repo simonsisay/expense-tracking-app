@@ -3,11 +3,12 @@
 	background-color:#00041e;
 	color:white;
 	justify-content: space-between;
-	padding:5px;
+	padding:7px;
 }
 
 .header h2{
 	padding-left: 26px;
+	padding-top:3px;
 	font-weight: bold;
 }
 
