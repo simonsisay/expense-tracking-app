@@ -1,0 +1,22 @@
+.header{
+	display: flex;
+	background-color:#00041e;
+	color:white;
+	justify-content: space-between;
+	padding:5px;
+}
+
+.header h2{
+	padding-left: 35px;
+}
+
+.logout{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right:30px;
+}
+
+.logout a{
+	color:white;
+}

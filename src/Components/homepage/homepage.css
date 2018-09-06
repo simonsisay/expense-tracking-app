@@ -1,0 +1,64 @@
+.home-container{
+	width:80vw;
+	margin:30px auto;
+
+}
+
+.total-expense, .button{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.search-field{
+	margin:auto;
+	max-width:300px;
+	margin-top:30px;
+}
+
+
+
+/****** Expenses Style ************/
+
+.expenses-list{
+	margin-top:65px;
+}
+
+.description, .amount{
+	font-weight: bold;
+}
+
+.list-icons-top .icon{
+	padding:0 5px;
+}
+
+.date-bottom{
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin-bottom: 0 !important;
+}
+
+.sort-and-title{
+	padding:0 20px;
+	display: flex;
+	justify-content: space-between;
+	background:#00041e;
+	color:white;
+}
+
+.sort-and-title h3{
+	align-self: center;
+}
+
+.select-sort{
+	display: flex;
+	flex-direction: column;
+}
+
+.select-sort .label{
+	margin:0 !important;
+	margin-top:3px !important;
+	text-align: center;
+}
