@@ -29,6 +29,35 @@ class ExpensesList extends Component {
 						description={'Rent'}
 						date={'12/06/2018'}
 						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
+						toggleModal={this.props.toggleModal}
+					/>
+					<Expense 
+						amount={'500'}
+						description={'Rent'}
+						date={'12/06/2018'}
+						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
+						toggleModal={this.props.toggleModal}
+					/>
+					<Expense 
+						amount={'500'}
+						description={'Rent'}
+						date={'12/06/2018'}
+						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
+						toggleModal={this.props.toggleModal}
+					/>
+					<Expense 
+						amount={'500'}
+						description={'Rent'}
+						date={'12/06/2018'}
+						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
+						toggleModal={this.props.toggleModal}
+					/>
+					<Expense 
+						amount={'500'}
+						description={'Rent'}
+						date={'12/06/2018'}
+						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
+						toggleModal={this.props.toggleModal}
 					/>
 				</div>
 

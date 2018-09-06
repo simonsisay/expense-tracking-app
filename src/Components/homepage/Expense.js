@@ -1,30 +1,41 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { ListGroup, ListGroupItem, Fa } from 'mdbreact'
 import { Link } from 'react-router-dom'
 
 
-const Expense = ({description, date, amount, note}) => {
-	return(
-	 <ListGroup>
-         <ListGroupItem>
+class Expense extends Component {
 
-              <div class="d-flex w-100 justify-content-between">
-                  <h5 class="description mb-1">{description}</h5>
 
-                  <div className="list-icons-top">
-                  	<Link to="/"><Fa icon="edit" color="black" className="icon edit"/></Link>
-                  	<Link to="/"><Fa icon="trash " className="icon delete"/></Link>
-                  </div>
-              </div>
+  render(){
+   const  {description, date, amount, note} = this.props;
+   
+  	return(
+  	 <ListGroup>
+           <ListGroupItem>
 
-              <p>{ note }</p>
-              <h5 class="mb-1" className="amount">${ amount }</h5>
+                <div className="d-flex w-100 justify-content-between">
+                    <h5 className="description mb-1">{description}</h5>
 
-              <p className="date-bottom">{ date }</p>
+                    <div className="list-icons-top">
+                    	<Link to="/edit/1">
+                        <Fa icon="edit" className="icon edit primary-text"/>
+                      </Link>
+                        <Fa icon="trash " 
+                          className="icon delete red-text" 
+                          onClick={this.props.toggleModal}
+                        />
+                    </div>
+                </div>
 
-          </ListGroupItem>
-    </ListGroup>
-	)
+                <p>{ note }</p>
+                <h5 className="mb-1" className="amount">${ amount }</h5>
+
+                <p className="date-bottom">{ date }</p>
+
+            </ListGroupItem>
+      </ListGroup>
+  	)
+  }
 }
 
 export default Expense

@@ -67,3 +67,39 @@
 	text-align: center;
 	font-size:90%;
 }
+
+.delete{
+	cursor: pointer;
+}
+
+.delete-modal{
+	margin:30px auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height:150px;
+	width:70vw;
+	background:#00041e;
+	color:white;
+	text-align: center;
+}
+
+.delete-modal div{
+	background:#00041e;
+}
+
+.modal-buttons button{
+	background:blue;
+	color:white;
+	border-radius: 4px;
+	margin:10px;
+	border:none;
+	cursor:pointer;
+	box-shadow:2px 5px 2px black;
+}
+
+.modal-buttons .yes{
+	background:red;
+}
+

@@ -11,7 +11,7 @@ class AddExpensePage extends Component {
 				<div className="add-expense-container">
 					<h3>Add New Expense</h3>
 				</div>
-				<ExpenseForm />
+				<ExpenseForm buttonText={'Add Expense'}/>
 			</div>
 		)
 	}
