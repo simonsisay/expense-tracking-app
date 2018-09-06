@@ -3,6 +3,7 @@ import { Header, ButtonComponent } from '../Common'
 import ExpensesTotal from './ExpensesTotal'
 import SearchField from './SearchField'
 import ExpensesList from './ExpensesList'
+import { Link } from 'react-router-dom'
 import './homepage.css'
 
 class Home extends Component {
@@ -13,7 +14,7 @@ class Home extends Component {
 				<div className="home-container">
 					<ExpensesTotal />
 					<div className="button">
-						<ButtonComponent buttonText={'Add Expense'}/>
+						<Link to="/add"><ButtonComponent buttonText={'Add Expense'}/></Link>
 					</div>
 					<SearchField />
 					<ExpensesList />

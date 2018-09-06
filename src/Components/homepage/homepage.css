@@ -4,6 +4,10 @@
 
 }
 
+.total-expense{
+	margin-top:50px;
+}
+
 .total-expense, .button{
 	display: flex;
 	flex-direction: column;
@@ -14,7 +18,7 @@
 .search-field{
 	margin:auto;
 	max-width:300px;
-	margin-top:30px;
+	margin-top:60px;
 }
 
 
@@ -61,4 +65,5 @@
 	margin:0 !important;
 	margin-top:3px !important;
 	text-align: center;
+	font-size:90%;
 }

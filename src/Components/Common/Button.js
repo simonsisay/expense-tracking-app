@@ -3,7 +3,7 @@ import { Button } from 'reactstrap'
 
 const ButtonComponent = ( {buttonText} ) => {
 	return(
-		<Button color="primary">
+		<Button color="indigo">
 			{buttonText}
 		</Button>
 	)

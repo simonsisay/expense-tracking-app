@@ -1,0 +1,24 @@
+.add-expense-container{
+	max-width:90vw;
+	margin:50px auto;
+}
+
+.add-expense-container h3{
+	text-align: center;
+}
+
+form{
+	max-width:70vw !important;
+	display: flex;
+	flex-direction: column;
+	margin:auto;
+}
+
+
+.form-container input{
+	padding:25px !important;
+}
+
+.text-area{
+	width:;
+}

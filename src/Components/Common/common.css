@@ -1,0 +1,52 @@
+.header{
+	display: flex;
+	background-color:#00041e;
+	color:white;
+	justify-content: space-between;
+	padding:5px;
+}
+
+.header h2{
+	padding-left: 26px;
+	font-weight: bold;
+}
+
+.header a{
+	color:white;
+}
+
+.header a:hover{
+	color:#ede7f6;
+}
+
+.logout{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right:30px;
+}
+
+.logout a{
+	color:white;
+}
+
+.logout a:hover{
+	color:#ede7f6;
+	font-weight: bold;
+}
+
+form{
+	max-width:70vw !important;
+	display: flex;
+	flex-direction: column;
+	margin:auto;
+}
+
+
+.form-container input{
+	padding:25px !important;
+}
+
+.text-area{
+	width:;
+}
