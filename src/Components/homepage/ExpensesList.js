@@ -2,12 +2,10 @@ import React, { Component } from 'react'
 import { Card } from 'mdbreact'
 import Expense from './Expense'
 import { FormGroup, Input, Label} from 'reactstrap'
+import { ExpenseContext } from '../../Context/ExpenseContext'
+
 
 class ExpensesList extends Component {
-
-	getSelectValue = () => {
-
-	}
 
 	render(){
 		return(
@@ -24,71 +22,24 @@ class ExpensesList extends Component {
 				</div>
 
 				<div className="expense">
-					<Expense 
-						amount={'500'}
-						description={'Rent'}
-						date={'12/06/2018'}
-						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
-						toggleModal={this.props.toggleModal}
-					/>
-					<Expense 
-						amount={'500'}
-						description={'Rent'}
-						date={'12/06/2018'}
-						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
-						toggleModal={this.props.toggleModal}
-					/>
-					<Expense 
-						amount={'500'}
-						description={'Rent'}
-						date={'12/06/2018'}
-						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
-						toggleModal={this.props.toggleModal}
-					/>
-					<Expense 
-						amount={'500'}
-						description={'Rent'}
-						date={'12/06/2018'}
-						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
-						toggleModal={this.props.toggleModal}
-					/>
-					<Expense 
-						amount={'500'}
-						description={'Rent'}
-						date={'12/06/2018'}
-						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
-						toggleModal={this.props.toggleModal}
-					/>
-					<Expense 
-						amount={'500'}
-						description={'Rent'}
-						date={'12/06/2018'}
-						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
-						toggleModal={this.props.toggleModal}
-					/>
-					<Expense 
-						amount={'500'}
-						description={'Rent'}
-						date={'12/06/2018'}
-						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
-						toggleModal={this.props.toggleModal}
-					/>
-					<Expense 
-						amount={'500'}
-						description={'Rent'}
-						date={'12/06/2018'}
-						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
-						toggleModal={this.props.toggleModal}
-					/>
-					<Expense 
-						amount={'500'}
-						description={'Rent'}
-						date={'12/06/2018'}
-						note={'this is the first month rent payment and i am not happy, i will be broke next month'}
-						toggleModal={this.props.toggleModal}
-					/>
+					<ExpenseContext.Consumer>
+						{(context) => (
+							<React.Fragment>
+							{context.state.map(expense => (
+									<Expense
+										toggleModal={this.props.toggleModal}
+										key={expense.id}
+										amount={expense.amount}
+										description={expense.description}
+										note={expense.note}
+										date={expense.createdAt}
+										id={expense.id}
+									/>
+							))}
+							</React.Fragment>
+						)}
+					</ExpenseContext.Consumer>
 				</div>
-
 			</div>
 		)
 	}

@@ -4,25 +4,40 @@ import { Link } from 'react-router-dom'
 
 
 class Expense extends Component {
+  constructor(props){
+    super(props);
+  }
 
 
   render(){
-   const  {description, date, amount, note} = this.props;
+
+   const  {description, date, amount, note,id} = this.props;
    
   	return(
-  	 <ListGroup>
-           <ListGroupItem>
+  	 <ListGroup className="list-group">
+           <ListGroupItem className="list-item">
 
                 <div className="d-flex w-100 justify-content-between">
                     <h5 className="description mb-1">{description}</h5>
 
                     <div className="list-icons-top">
-                    	<Link to="/edit/1">
+                    	<Link 
+                        to={{ 
+                          pathname:`/edit/${id}` , 
+                          state:{
+                            description,
+                            amount,
+                            note,
+                            createdAt:date,
+                            fromEdit:true
+                          }
+                      }}
+                      >
                         <Fa icon="edit" className="icon edit primary-text"/>
                       </Link>
                         <Fa icon="trash " 
                           className="icon delete red-text" 
-                          onClick={this.props.toggleModal}
+                          onClick={() => this.props.toggleModal(id)}
                         />
                     </div>
                 </div>

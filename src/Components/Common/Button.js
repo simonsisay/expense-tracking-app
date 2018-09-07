@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { Button } from 'reactstrap'
+import { Button} from 'reactstrap'
 
-const ButtonComponent = ( {buttonText } ) => {
+const ButtonComponent = ( {buttonText, task } ) => {
 	return(
-		<Button color="indigo">
-			{buttonText}
+		<Button color="indigo" onClick={task || null}>
+	 		{buttonText}
 		</Button>
 	)
 }

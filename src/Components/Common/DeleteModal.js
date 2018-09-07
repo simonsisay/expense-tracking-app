@@ -1,23 +1,43 @@
 import React, { Component } from 'react'
-import Modal from 'react-modal'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { ExpenseContext } from '../../Context/ExpenseContext'
 
+class DeleteModal extends Component {
+	
+	toggleOff = () => {
+		this.props.toggleModal();
+	}
 
-const DeleteModal = ({toggleModal, isModalOpen}) => {
-	return(
-		<Modal
-			className="delete-modal"
-			isOpen={!!isModalOpen}
-			contentLabel={'Delete Modal'}
-		>
-			<div className="modal-content">
-				<p>Are you sure you want delete this expense</p>
-				<div className="modal-buttons">
-					<button className="yes">Yes</button>
-					<button onClick={toggleModal}>No</button>
-				</div>
-			</div>
-		</Modal>
-	)
+	render(){
+		const {toggleModal, isModalOpen, deleteId} = this.props;
+		return(
+			 <Modal isOpen={isModalOpen} toggle={toggleModal} centered>
+
+		       <ModalBody>
+		         <p>Are you sure you want to delete this expense ?</p>
+		       </ModalBody>
+
+		       <ModalFooter>
+		        <ExpenseContext.Consumer>
+			  	 	{(context) =>(
+			  	 	<React.Fragment>
+			  		  <Button 
+				  		  	onClick={() => {
+				  		  		context.deleteExpense(deleteId)
+				  		  		toggleModal()
+				  		  	}}
+				  		  	color="danger"> Delete
+			  		  </Button>
+			  		</React.Fragment>
+			  		 )
+			  	 	}
+			  	</ExpenseContext.Consumer>
+		         <Button color="indigo" onClick={toggleModal}>Cancel</Button>
+		       </ModalFooter>
+
+		     </Modal>
+		 )
+	}
 }
 
 export { DeleteModal }
